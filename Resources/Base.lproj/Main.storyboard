@@ -349,9 +349,6 @@
                                                 <state key="normal" title="Statrt Navigation">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="statrtNavigation:" destination="g2Y-an-tyG" eventType="touchUpInside" id="9PF-Pq-azl"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -398,9 +395,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adress1Lbl" destination="ZAC-Tu-EdQ" id="1QT-Ji-cOb"/>
-                        <outlet property="adress2Lbl" destination="R4N-eh-TsR" id="SEh-Rf-0Qp"/>
-                        <outlet property="cityLbl" destination="sAZ-lz-fMY" id="uXL-Ih-e1h"/>
                         <outlet property="map" destination="94W-De-lcs" id="1eR-Il-oYJ"/>
                         <outlet property="namelbl" destination="DZb-Z0-Noq" id="XEB-rZ-dGC"/>
                         <outlet property="noteLbl" destination="12t-rA-oyX" id="wRX-xL-AoW"/>

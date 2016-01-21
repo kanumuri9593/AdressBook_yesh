@@ -12,6 +12,10 @@
 		12B123321C5142DE00A579DE /* materialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B123311C5142DE00A579DE /* materialTextField.swift */; };
 		12B123341C51430900A579DE /* materialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B123331C51430900A579DE /* materialButton.swift */; };
 		12B123361C51434800A579DE /* AdressContactcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B123351C51434800A579DE /* AdressContactcell.swift */; };
+		12B123381C51528D00A579DE /* AdressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B123371C51528D00A579DE /* AdressListViewController.swift */; };
+		12B1233A1C51555100A579DE /* AddAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B123391C51555100A579DE /* AddAdressViewController.swift */; };
+		12B1233C1C51588C00A579DE /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1233B1C51588C00A579DE /* NavigateViewController.swift */; };
+		12B1233E1C51747100A579DE /* materialLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1233D1C51747100A579DE /* materialLabel.swift */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
@@ -30,6 +34,10 @@
 		12B123311C5142DE00A579DE /* materialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialTextField.swift; sourceTree = "<group>"; };
 		12B123331C51430900A579DE /* materialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialButton.swift; sourceTree = "<group>"; };
 		12B123351C51434800A579DE /* AdressContactcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdressContactcell.swift; sourceTree = "<group>"; };
+		12B123371C51528D00A579DE /* AdressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdressListViewController.swift; sourceTree = "<group>"; };
+		12B123391C51555100A579DE /* AddAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAdressViewController.swift; sourceTree = "<group>"; };
+		12B1233B1C51588C00A579DE /* NavigateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigateViewController.swift; sourceTree = "<group>"; };
+		12B1233D1C51747100A579DE /* materialLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialLabel.swift; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +86,7 @@
 				12B1232D1C5140EC00A579DE /* materialView.swift */,
 				12B123311C5142DE00A579DE /* materialTextField.swift */,
 				12B123331C51430900A579DE /* materialButton.swift */,
+				12B1233D1C51747100A579DE /* materialLabel.swift */,
 				12B123351C51434800A579DE /* AdressContactcell.swift */,
 			);
 			name = view;
@@ -87,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
+				12B123371C51528D00A579DE /* AdressListViewController.swift */,
+				12B123391C51555100A579DE /* AddAdressViewController.swift */,
+				12B1233B1C51588C00A579DE /* NavigateViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -223,11 +235,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B123321C5142DE00A579DE /* materialTextField.swift in Sources */,
+				12B1233A1C51555100A579DE /* AddAdressViewController.swift in Sources */,
 				12B123361C51434800A579DE /* AdressContactcell.swift in Sources */,
+				12B1233C1C51588C00A579DE /* NavigateViewController.swift in Sources */,
 				12B1232E1C5140EC00A579DE /* materialView.swift in Sources */,
+				12B1233E1C51747100A579DE /* materialLabel.swift in Sources */,
 				12B123341C51430900A579DE /* materialButton.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+				12B123381C51528D00A579DE /* AdressListViewController.swift in Sources */,
 				12B123301C51414B00A579DE /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +352,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "ParseStarterProject-Swift";
 			};
@@ -351,6 +368,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "ParseStarterProject-Swift";
 			};

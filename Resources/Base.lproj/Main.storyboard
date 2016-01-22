@@ -160,7 +160,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="GmL-3E-YCU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="GmL-3E-YCU" customClass="AdressListTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="600" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GmL-3E-YCU" id="gw4-JJ-ASp">
@@ -213,6 +213,8 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="noteLbl" destination="C1Q-kd-tXf" id="rqD-dX-9yc"/>
+                                    <outlet property="titleLbl" destination="VS1-9J-DOH" id="6up-0k-8HN"/>
                                     <segue destination="g2Y-an-tyG" kind="show" identifier="navigate" id="IFO-BR-b7J"/>
                                 </connections>
                             </tableViewCell>
@@ -349,6 +351,9 @@
                                                 <state key="normal" title="Statrt Navigation">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="statrtNavigation:" destination="g2Y-an-tyG" eventType="touchUpInside" id="b4z-8p-bsn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -395,6 +400,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adress1Lbl" destination="ZAC-Tu-EdQ" id="VDg-KP-zUy"/>
+                        <outlet property="adress2Lbl" destination="R4N-eh-TsR" id="4I3-pE-1AY"/>
+                        <outlet property="cityLbl" destination="sAZ-lz-fMY" id="sWw-nY-6Ej"/>
                         <outlet property="map" destination="94W-De-lcs" id="1eR-Il-oYJ"/>
                         <outlet property="namelbl" destination="DZb-Z0-Noq" id="XEB-rZ-dGC"/>
                         <outlet property="noteLbl" destination="12t-rA-oyX" id="wRX-xL-AoW"/>
@@ -583,6 +591,7 @@
                         <outlet property="map" destination="0T5-gA-MXx" id="Erh-gE-UbL"/>
                         <outlet property="nameTitle" destination="Cm9-nQ-6QA" id="2bT-rC-dAZ"/>
                         <outlet property="note" destination="gXn-AI-CPd" id="F6Z-gR-LAW"/>
+                        <outlet property="pin" destination="GRh-ou-0gt" id="wL8-JF-4Y4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PM-do-IQk" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -41,9 +41,9 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     
     @IBOutlet weak var city: materialTextfield!
     
+    @IBOutlet weak var pin: materialTextfield!
     
-    @IBAction func addAdress(sender: AnyObject) {
-    }
+    
     
     
     
@@ -144,7 +144,27 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     }
     
     
-    
+    @IBAction func addAdress(sender: AnyObject) {
+        
+        
+        var riderRequest = PFObject(className:"AdressList")
+        riderRequest["username"] = PFUser.currentUser()?.username
+        riderRequest["location"] = PFGeoPoint(latitude:latitude, longitude:longitude)
+        riderRequest["title"]    = self.nameTitle.text
+            riderRequest["note"] = self.note.text
+        riderRequest["Adressline1"] = self.adress1.text
+        riderRequest["Adressline2"] = self.adress2.text
+        riderRequest["city"]   = self.city.text
+        riderRequest["Pin"]  = self.pin.text
+        
+        riderRequest.saveInBackground()
+
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        
+        
+    }
     
 }
     

@@ -158,13 +158,9 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         riderRequest["Pin"]  = self.pin.text
         
         riderRequest.saveInBackground()
+        navigationController?.popViewControllerAnimated(true)
 
-        
-        dismissViewControllerAnimated(true, completion: nil)
-        
-        
-        
-    }
+         }
     
 }
     

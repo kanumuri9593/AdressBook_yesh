@@ -20,6 +20,7 @@ class AdressListViewController: UITableViewController {
     var adress2 = [String]()
     var city = [String]()
     var pin = [String]()
+    var tiles = [adress]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,6 +122,9 @@ class AdressListViewController: UITableViewController {
                         }
                     }
                     
+                    
+                    
+                    
                     self.tableView.reloadData()
     
                 }
@@ -153,9 +157,11 @@ class AdressListViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! AdressListTableViewCell
+        
+        let tile = adress(title: self.name[indexPath.row], note: self.note[indexPath.row])
 
-        cell.textLabel?.text = name[indexPath.row]
+        cell.configCell(tile)
 
         return cell
     }

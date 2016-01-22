@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,7 +22,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-fZ-sJm" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-fZ-sJm" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="90" width="560" height="81"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="81" id="1OP-Ie-67H"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-iC-9WE" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-iC-9WE" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="196" width="560" height="384"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-oA-e57">
@@ -176,7 +175,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="RHl-CZ-ePQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -592,11 +591,12 @@
                         <outlet property="nameTitle" destination="Cm9-nQ-6QA" id="2bT-rC-dAZ"/>
                         <outlet property="note" destination="gXn-AI-CPd" id="F6Z-gR-LAW"/>
                         <outlet property="pin" destination="GRh-ou-0gt" id="wL8-JF-4Y4"/>
+                        <segue destination="sYe-W3-1Ur" kind="show" identifier="toAdressList" id="LHm-9g-VNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PM-do-IQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="823"/>
+            <point key="canvasLocation" x="1216" y="866"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hil-Dk-o0M">
@@ -616,4 +616,7 @@
             <point key="canvasLocation" x="575" y="22"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LHm-9g-VNB"/>
+    </inferredMetricsTieBreakers>
 </document>

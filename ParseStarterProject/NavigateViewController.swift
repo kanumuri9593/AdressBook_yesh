@@ -76,15 +76,7 @@ class NavigateViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     
@@ -166,7 +158,38 @@ class NavigateViewController: UIViewController {
             }
     
     
+    @IBAction func deleteAdress(sender: AnyObject) {
+        
+        
+        var query = PFQuery(className:"AdressList")
+        query.whereKey("title", equalTo: self.name)
+        query.whereKey("note", equalTo: self.note)
+        
+        query.findObjectsInBackgroundWithBlock {
+            (objects, error) -> Void in
+            if error == nil {
+                
+                for object in objects!  {
+                    
+                    object.deleteInBackground()
+                }
+                
+                
+                
+            } else {
+                print(error)
+            }
+        }
+        
+
+        
+        navigationController?.popViewControllerAnimated(true)
+        
+        
+    }
     
+    @IBAction func editAdress(sender: AnyObject) {
+    }
     
     
 

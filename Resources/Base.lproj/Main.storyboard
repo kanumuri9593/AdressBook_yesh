@@ -396,10 +396,17 @@
                                 <items>
                                     <barButtonItem title="Edit" id="kfJ-Fy-0L4">
                                         <color key="tintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="editAdress:" destination="g2Y-an-tyG" id="WEc-S5-RCR"/>
+                                            <segue destination="7mg-DE-Qzl" kind="show" id="hmP-J2-HVr"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TcR-Nk-vZi"/>
                                     <barButtonItem title="Delete" id="XZK-FP-NsL">
                                         <color key="tintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="deleteAdress:" destination="g2Y-an-tyG" id="wrh-m1-vHa"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -426,6 +433,7 @@
                         <outlet property="map" destination="94W-De-lcs" id="1eR-Il-oYJ"/>
                         <outlet property="namelbl" destination="DZb-Z0-Noq" id="XEB-rZ-dGC"/>
                         <outlet property="noteLbl" destination="12t-rA-oyX" id="wRX-xL-AoW"/>
+                        <segue destination="sYe-W3-1Ur" kind="show" identifier="maptotabel" id="qKV-Tq-s2l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSj-xJ-f8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PM-do-IQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="866"/>
+            <point key="canvasLocation" x="915" y="901"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hil-Dk-o0M">
@@ -638,6 +646,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LHm-9g-VNB"/>
+        <segue reference="qKV-Tq-s2l"/>
+        <segue reference="hmP-J2-HVr"/>
     </inferredMetricsTieBreakers>
 </document>

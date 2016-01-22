@@ -17,60 +17,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-N7-o87">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-N7-o87">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2wa-QN-V8Q"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-fZ-sJm" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-fZ-sJm" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="90" width="560" height="81"/>
                                 <subviews>
-                                    <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Drawing (1)" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-nm-WFh">
-                                        <rect key="frame" x="114" y="22" width="332" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-J5-boP">
+                                        <rect key="frame" x="144" y="8" width="272" height="65"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="ONX-VX-hwJ"/>
-                                            <constraint firstAttribute="width" constant="332" id="bDG-X0-Tij"/>
+                                            <constraint firstAttribute="height" constant="65" id="fCP-07-COX"/>
+                                            <constraint firstAttribute="width" constant="272" id="r1t-X9-UOs"/>
                                         </constraints>
-                                    </imageView>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="29"/>
+                                        <color key="textColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="gMl-nm-WFh" firstAttribute="centerX" secondItem="fHX-fZ-sJm" secondAttribute="centerX" id="GHv-Qe-gOq"/>
-                                    <constraint firstItem="gMl-nm-WFh" firstAttribute="centerY" secondItem="fHX-fZ-sJm" secondAttribute="centerY" id="KvR-RP-Upi"/>
+                                    <constraint firstItem="sYr-J5-boP" firstAttribute="centerX" secondItem="fHX-fZ-sJm" secondAttribute="centerX" id="3tV-vy-84z"/>
+                                    <constraint firstItem="sYr-J5-boP" firstAttribute="top" secondItem="fHX-fZ-sJm" secondAttribute="top" constant="8" id="TbJ-P1-jbY"/>
+                                    <constraint firstAttribute="height" constant="81" id="UOH-zj-YY3"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-iC-9WE" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-iC-9WE" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="196" width="560" height="384"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-oA-e57">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-oA-e57">
                                         <rect key="frame" x="8" y="8" width="143" height="21"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Vpl-58-oSC"/>
+                                            <constraint firstAttribute="width" constant="143" id="o5c-zj-0cd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84X-Cg-R5p" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84X-Cg-R5p" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="142.5" y="109" width="275" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MvX-xU-aJ4"/>
+                                            <constraint firstAttribute="width" constant="275" id="T79-DV-KcI"/>
+                                        </constraints>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-Tt-HZv" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-Tt-HZv" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="142.5" y="154" width="275" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="275" id="HwZ-b7-Yi5"/>
+                                            <constraint firstAttribute="height" constant="30" id="ssa-tc-wa3"/>
+                                        </constraints>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-J6-a2W" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-J6-a2W" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="195" y="236" width="171" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="E9R-GH-h5j"/>
+                                            <constraint firstAttribute="height" constant="30" id="pzg-uZ-hJP"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,9 +102,13 @@
                                             <action selector="SigunUpbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quj-WC-unC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-ZL-ynd" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-ZL-ynd" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="121" y="296" width="319.5" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Hf7-YT-LNO"/>
+                                            <constraint firstAttribute="width" constant="319.5" id="Pa0-j0-XG8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Already Signed Up? Log In.">
                                             <color key="titleColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,18 +120,33 @@
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2NK-J6-a2W" firstAttribute="centerX" secondItem="EaZ-iC-9WE" secondAttribute="centerX" id="1tC-b1-Vhk"/>
+                                    <constraint firstItem="2NK-J6-a2W" firstAttribute="top" secondItem="YCu-Tt-HZv" secondAttribute="bottom" constant="52" id="3bc-D3-8dn"/>
+                                    <constraint firstItem="84X-Cg-R5p" firstAttribute="centerX" secondItem="EaZ-iC-9WE" secondAttribute="centerX" id="Lp8-Rc-3V8"/>
+                                    <constraint firstItem="b6R-oA-e57" firstAttribute="top" secondItem="EaZ-iC-9WE" secondAttribute="top" constant="8" id="XFr-zA-AdJ"/>
+                                    <constraint firstItem="YCu-Tt-HZv" firstAttribute="top" secondItem="84X-Cg-R5p" secondAttribute="bottom" constant="15" id="dDO-OZ-J9l"/>
+                                    <constraint firstItem="84X-Cg-R5p" firstAttribute="top" secondItem="b6R-oA-e57" secondAttribute="bottom" constant="80" id="fsx-IR-6JE"/>
+                                    <constraint firstItem="b6R-oA-e57" firstAttribute="leading" secondItem="EaZ-iC-9WE" secondAttribute="leading" constant="8" id="gIT-ea-1EO"/>
+                                    <constraint firstItem="IRA-ZL-ynd" firstAttribute="centerX" secondItem="EaZ-iC-9WE" secondAttribute="centerX" id="gNt-hB-VJs"/>
+                                    <constraint firstItem="IRA-ZL-ynd" firstAttribute="top" secondItem="2NK-J6-a2W" secondAttribute="bottom" constant="30" id="rE4-Gx-uVw"/>
+                                    <constraint firstItem="YCu-Tt-HZv" firstAttribute="centerX" secondItem="EaZ-iC-9WE" secondAttribute="centerX" id="ubx-ZT-hEN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EaZ-iC-9WE" secondAttribute="bottom" constant="20" id="8B9-g6-zkR"/>
-                            <constraint firstItem="EaZ-iC-9WE" firstAttribute="top" secondItem="fHX-fZ-sJm" secondAttribute="bottom" constant="25" id="A0y-qd-lhd"/>
-                            <constraint firstItem="EaZ-iC-9WE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Bqi-fG-KLo"/>
-                            <constraint firstItem="fHX-fZ-sJm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="Wlz-Yu-tZd"/>
-                            <constraint firstItem="EaZ-iC-9WE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="k0O-ac-6Pp"/>
-                            <constraint firstItem="fHX-fZ-sJm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kA8-al-kI4"/>
-                            <constraint firstItem="fHX-fZ-sJm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l1U-uK-SG7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EaZ-iC-9WE" secondAttribute="bottom" constant="20" id="3Bh-ya-zOL"/>
+                            <constraint firstItem="EaZ-iC-9WE" firstAttribute="top" secondItem="fHX-fZ-sJm" secondAttribute="bottom" constant="25" id="81a-A8-u1O"/>
+                            <constraint firstItem="fHX-fZ-sJm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DMf-Nz-lFg"/>
+                            <constraint firstItem="mO1-N7-o87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TqW-zI-uVZ"/>
+                            <constraint firstItem="EaZ-iC-9WE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W6o-16-rn2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mO1-N7-o87" secondAttribute="trailing" constant="-20" id="Xz1-e2-Ylf"/>
+                            <constraint firstItem="mO1-N7-o87" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="fan-ui-wak"/>
+                            <constraint firstItem="fHX-fZ-sJm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="fl5-A4-7T2"/>
+                            <constraint firstItem="fHX-fZ-sJm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oMP-8o-Bav"/>
+                            <constraint firstItem="EaZ-iC-9WE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oNz-q0-LSS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -471,7 +513,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adress Line 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-9L-p1P" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-9L-p1P" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="75" width="250" height="33"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -482,7 +524,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adress Line 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-fl-Jmt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adress " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-fl-Jmt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="112" width="250" height="32"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -595,9 +637,6 @@
             <point key="canvasLocation" x="575" y="22"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Drawing (1)" width="145" height="29"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LHm-9g-VNB"/>
     </inferredMetricsTieBreakers>

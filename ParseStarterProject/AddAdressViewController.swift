@@ -158,9 +158,31 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         riderRequest["Pin"]  = self.pin.text
         
         riderRequest.saveInBackground()
+        
+        
         navigationController?.popViewControllerAnimated(true)
+        
+        
+        
+
 
          }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "toAdressList" {
+            
+            let destination = segue.destinationViewController as? AdressListViewController
+            
+            destination?.tableView.reloadData()
+            
+        }
+
+        
+        
+        
+    }
     
 }
     

@@ -21,9 +21,22 @@ class AdressListViewController: UITableViewController {
     var city = [String]()
     var pin = [String]()
     var tiles = [adress]()
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.tableView.reloadData()
+        
+        
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        
+        self.name.removeAll()
+        self.note.removeAll()
         
         var query = PFQuery(className:"AdressList")
         query.whereKey("username", equalTo:PFUser.currentUser()!.username!)
@@ -137,6 +150,9 @@ class AdressListViewController: UITableViewController {
         }
 
             }
+    
+   
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -167,50 +183,7 @@ class AdressListViewController: UITableViewController {
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -226,8 +199,6 @@ class AdressListViewController: UITableViewController {
             
             let destination = segue.destinationViewController as? AddAdressViewController
             
-            //destination?.requestLocation = locations[(tableView.indexPathForSelectedRow?.row)!]
-            //destination?.requestUsername = usernames[(tableView.indexPathForSelectedRow?.row)!]
             
         } else {
         
@@ -247,7 +218,7 @@ class AdressListViewController: UITableViewController {
             
             print(name[(tableView.indexPathForSelectedRow?.row)!])
             
-            //destination?.requestUsername = usernames[(tableView.indexPathForSelectedRow?.row)!]
+            
         
         }
 

@@ -23,6 +23,9 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     var currentLocation: String = ""
     
     
+    var editMode:Int = 1
+    
+    
     
     
     
@@ -44,6 +47,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     @IBOutlet weak var pin: materialTextfield!
     
     
+    @IBOutlet weak var addadressLbl: materialButton!
     
     
     
@@ -63,6 +67,17 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        
+        if editMode == 2 {
+        
+        self.addadressLbl.setTitle("Update Adress", forState: UIControlState.Normal)
+        
+        } else {
+        
+        self.addadressLbl.setTitle("Add Adress", forState: UIControlState.Normal)
+        
+        
+        }
 
 
         
@@ -74,22 +89,32 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         var location:CLLocationCoordinate2D = manager.location!.coordinate
         
+        print(editMode)
+        
+        if editMode == 1 {
         self.latitude = location.latitude
         self.longitude = location.longitude
+        }
+        
+        print(self.longitude)
+        print(self.latitude)
         
         print("locations = \(location.latitude) \(location.longitude)")
         
-        let center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        let center = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.map.setRegion(region, animated: true)
         
         self.map.removeAnnotations(map.annotations)
         
-        var pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+        var pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(self.latitude, self.longitude)
         var objectAnnotation = MKPointAnnotation()
         objectAnnotation.coordinate = pinLocation
         objectAnnotation.title = "Your location"
+        
+        
+        
         
         //--- CLGeocode to get address of current location ---//
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
@@ -104,6 +129,9 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
             {
                 let pm = placemarks![0] as CLPlacemark
                 self.displayLocationInfo(pm)
+                
+                self.editMode = 1
+                
             }
             else
             {
@@ -136,9 +164,11 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
             
             print(currenGpsAdress)
             
+            if editMode == 1 {
+            
             self.currentAdress.text = currenGpsAdress
             
-            
+            }
         }
         
     }

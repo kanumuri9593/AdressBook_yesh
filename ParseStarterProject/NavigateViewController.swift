@@ -9,8 +9,9 @@
 import UIKit
 import Parse
 import MapKit
+import CoreLocation
 
-class NavigateViewController: UIViewController {
+class NavigateViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBOutlet weak var map: MKMapView!
@@ -35,6 +36,8 @@ class NavigateViewController: UIViewController {
     var adress2: String = ""
     var city: String = ""
     var pin: String = ""
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -189,8 +192,75 @@ class NavigateViewController: UIViewController {
     }
     
     @IBAction func editAdress(sender: AnyObject) {
+ 
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        if segue.identifier == "editadress" {
+            
+            
+            let destination = segue.destinationViewController as? AddAdressViewController
+            
+            
+            
+            destination?.latitude = self.requestLocation.latitude
+            destination?.longitude = self.requestLocation.longitude
+            destination?.editMode = 2
+            
+            
+            
+            destination?.currentLocation = "Edit the location details"
+            
+            print(self.requestLocation.longitude)
+            print(self.requestLocation.latitude)
+            
+           // destination?.adress1 = adress1[(tableView.indexPathForSelectedRow?.row)!]
+            
+            var query = PFQuery(className:"AdressList")
+            query.whereKey("title", equalTo: self.name)
+            query.whereKey("note", equalTo: self.note)
+            
+            query.findObjectsInBackgroundWithBlock {
+                (objects, error) -> Void in
+                if error == nil {
+                    
+                    for object in objects!  {
+                        
+                        object.deleteInBackground()
+                    }
+                    
+                    
+                    
+                } else {
+                    print(error)
+                }
+            }
+
+            
+        
+        }
+    
+    }
+    
+
+
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-}

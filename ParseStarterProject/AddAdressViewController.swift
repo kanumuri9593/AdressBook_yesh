@@ -20,7 +20,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     var latitude :CLLocationDegrees = 0
     var longitude :CLLocationDegrees = 0
     
-    var currentLocation: String = ""
+    var currentLocation: String = "Edit the location details"
     
     
     var editMode:Int = 1
@@ -168,6 +168,11 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
             
             self.currentAdress.text = currenGpsAdress
             
+            }else {
+            
+            
+            self.currentAdress.text = "update the current location"
+            
             }
         }
         
@@ -183,14 +188,34 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         
         var riderRequest = PFObject(className:"AdressList")
+        
+        
+        
+        
         riderRequest["username"] = PFUser.currentUser()?.username
         riderRequest["location"] = PFGeoPoint(latitude:latitude, longitude:longitude)
+        
+        
+       
+        
+        
+        
+            
+            
         riderRequest["title"]    = self.nameTitle.text
+        
+        
+        
+        
+        
             riderRequest["note"] = self.note.text
         riderRequest["Adressline1"] = self.adress1.text
         riderRequest["Adressline2"] = self.adress2.text
         riderRequest["city"]   = self.city.text
         riderRequest["Pin"]  = self.pin.text
+        
+        
+        if self.nameTitle.text != "" {
         
         riderRequest.saveInBackground()
         
@@ -199,7 +224,17 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         
         
+        }else if editMode == 2 {
+        
+            alert("Error", message: "please fill the fields")
 
+        
+        
+        }else{
+        
+        alert("Error", message: "please enter a Name/Title /n thankyou.")
+        
+        }
 
          }
     
@@ -260,6 +295,24 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         }
     }
 
+    
+    
+    func alert (title :String! , message :String!) {
+        
+        if #available(iOS 8.0, *) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            
+            
+            print("Alert view not available")
+            // Fallback on earlier versions
+        }
+        
+    }
     
 }
     

@@ -54,7 +54,10 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
         
         adress2Lbl.text = adress2
         
-        cityLbl.text = city + ",Pin : " + pin
+        cityLbl.text = city + " " + pin
+        
+        
+        print(name + note + adress1 + adress2 + city + pin)
         
         
         let region = MKCoordinateRegion(center: requestLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))

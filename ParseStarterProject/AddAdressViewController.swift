@@ -194,20 +194,10 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         riderRequest["username"] = PFUser.currentUser()?.username
         riderRequest["location"] = PFGeoPoint(latitude:latitude, longitude:longitude)
-        
-        
-       
-        
-        
-        
-            
-            
+          
         riderRequest["title"]    = self.nameTitle.text
         
-        
-        
-        
-        
+
             riderRequest["note"] = self.note.text
         riderRequest["Adressline1"] = self.adress1.text
         riderRequest["Adressline2"] = self.adress2.text
@@ -220,7 +210,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         riderRequest.saveInBackground()
         
         
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popToRootViewControllerAnimated(true)
         
         
         
@@ -232,7 +222,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         }else{
         
-        alert("Error", message: "please enter a Name/Title /n thankyou.")
+        alert("Error", message: "please enter a Name/Title.")
         
         }
 

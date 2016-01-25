@@ -207,6 +207,8 @@ class AdressListViewController: UITableViewController {
             print(pin.count)
             //print(pin[(tableView.indexPathForSelectedRow?.row)!])
             
+           // self.tableView.reloadData()
+            
         
             destination?.name = name[(tableView.indexPathForSelectedRow?.row)!]
             destination?.note = note[(tableView.indexPathForSelectedRow?.row)!]
@@ -217,7 +219,8 @@ class AdressListViewController: UITableViewController {
             destination?.requestLocation = locations[(tableView.indexPathForSelectedRow?.row)!]
             
             print(name[(tableView.indexPathForSelectedRow?.row)!])
-            
+            print(adress1[(tableView.indexPathForSelectedRow?.row)!])
+            print(city[(tableView.indexPathForSelectedRow?.row)!])
             
         
         }

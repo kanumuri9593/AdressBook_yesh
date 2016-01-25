@@ -170,18 +170,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="irb-sQ-DRn">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="sYe-W3-1Ur" id="X1y-m5-URj"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="GmL-3E-YCU" customClass="AdressListTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="82"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GmL-3E-YCU" id="gw4-JJ-ASp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
@@ -266,7 +257,6 @@
                 <searchDisplayController id="ajV-O9-7i8">
                     <connections>
                         <outlet property="delegate" destination="sYe-W3-1Ur" id="feL-hx-TBU"/>
-                        <outlet property="searchBar" destination="irb-sQ-DRn" id="gJB-oL-JT7"/>
                         <outlet property="searchContentsController" destination="sYe-W3-1Ur" id="fa7-Pz-p7o"/>
                         <outlet property="searchResultsDataSource" destination="sYe-W3-1Ur" id="o5V-wf-L2B"/>
                         <outlet property="searchResultsDelegate" destination="sYe-W3-1Ur" id="pcn-4W-AIA"/>
@@ -311,17 +301,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NHw-27-OAV">
                                         <rect key="frame" x="184" y="8" width="250" height="256"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZb-Z0-Noq" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZb-Z0-Noq" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="39"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="oVP-lY-tNg"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12t-rA-oyX" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12t-rA-oyX" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="44" width="250" height="39"/>
                                                 <animations/>
                                                 <constraints>
@@ -331,7 +321,7 @@
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAC-Tu-EdQ" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAC-Tu-EdQ" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="87" width="250" height="39"/>
                                                 <animations/>
                                                 <constraints>
@@ -341,7 +331,7 @@
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4N-eh-TsR" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4N-eh-TsR" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="131" width="250" height="39"/>
                                                 <animations/>
                                                 <constraints>
@@ -351,7 +341,7 @@
                                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAZ-lz-fMY" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAZ-lz-fMY" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="174" width="250" height="39"/>
                                                 <animations/>
                                                 <constraints>
@@ -563,7 +553,7 @@
                                                     <constraint firstAttribute="height" constant="17" id="c96-wr-3V8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxp-eL-bFN" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="224" width="250" height="33"/>
@@ -647,7 +637,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qKV-Tq-s2l"/>
+        <segue reference="LHm-9g-VNB"/>
         <segue reference="hmP-J2-HVr"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -87,7 +87,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        var location:CLLocationCoordinate2D = manager.location!.coordinate
+        let location:CLLocationCoordinate2D = manager.location!.coordinate
         
         print(editMode)
         
@@ -108,8 +108,8 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         self.map.removeAnnotations(map.annotations)
         
-        var pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(self.latitude, self.longitude)
-        var objectAnnotation = MKPointAnnotation()
+        let pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(self.latitude, self.longitude)
+        let objectAnnotation = MKPointAnnotation()
         objectAnnotation.coordinate = pinLocation
         objectAnnotation.title = "Your location"
         
@@ -178,7 +178,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!)
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
     {
         print("Error while updating location " + error.localizedDescription)
     }
@@ -187,14 +187,14 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     @IBAction func addAdress(sender: AnyObject) {
         
         
-        var riderRequest = PFObject(className:"AdressList")
+        let riderRequest = PFObject(className:"AdressList")
         
         
         
         
         riderRequest["username"] = PFUser.currentUser()?.username
         riderRequest["location"] = PFGeoPoint(latitude:latitude, longitude:longitude)
-          
+        
         riderRequest["title"]    = self.nameTitle.text
         
 

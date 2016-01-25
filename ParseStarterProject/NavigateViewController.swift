@@ -68,7 +68,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
         
         
         
-        var objectAnnotation = MKPointAnnotation()
+        let objectAnnotation = MKPointAnnotation()
         
         objectAnnotation.coordinate = requestLocation
         
@@ -93,7 +93,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
         print(PFUser.currentUser()!.username!)
         
         
-        var query = PFQuery(className:"AdressList")
+        let query = PFQuery(className:"AdressList")
         
          print(PFUser.currentUser()!.username!)
         
@@ -126,17 +126,17 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
                                     } else {
                                         
                                         if placemarks!.count > 0 {
-                                            let pm = placemarks![0] as! CLPlacemark
+                                            let pm = placemarks![0] 
                                             
                                             let mkPm = MKPlacemark(placemark: pm)
                                             
                                             
-                                            var mapItem = MKMapItem(placemark:mkPm)
+                                            let mapItem = MKMapItem(placemark:mkPm)
                                             
                                             mapItem.name = self.name
                                             
                                             //You could also choose: MKLaunchOptionsDirectionsModeWalking
-                                            var launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                                            let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
                                             
                                             mapItem.openInMapsWithLaunchOptions(launchOptions)
                                             
@@ -167,7 +167,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func deleteAdress(sender: AnyObject) {
         
         
-        var query = PFQuery(className:"AdressList")
+        let query = PFQuery(className:"AdressList")
         query.whereKey("title", equalTo: self.name)
         query.whereKey("note", equalTo: self.note)
         
@@ -222,7 +222,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
             
            // destination?.adress1 = adress1[(tableView.indexPathForSelectedRow?.row)!]
             
-            var query = PFQuery(className:"AdressList")
+            let query = PFQuery(className:"AdressList")
             query.whereKey("title", equalTo: self.name)
             query.whereKey("note", equalTo: self.note)
             

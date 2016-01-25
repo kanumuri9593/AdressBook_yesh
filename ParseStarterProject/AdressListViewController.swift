@@ -37,26 +37,26 @@ class AdressListViewController: UITableViewController {
         
         self.name.removeAll()
         self.note.removeAll()
+        self.adress1.removeAll()
+        self.adress2.removeAll()
+        self.city.removeAll()
+        self.pin.removeAll()
         
-        var query = PFQuery(className:"AdressList")
+        let query = PFQuery(className:"AdressList")
         query.whereKey("username", equalTo:PFUser.currentUser()!.username!)
         query.findObjectsInBackgroundWithBlock {
             (objects, error) -> Void in
             
             if error == nil {
                 
-                
-                
-                //print("Successfully retrieved \(objects!) .")
-                
-                // Do something with the found objects
+       
                 if let objects = objects {
                     
                     
                     
                     for object in objects {
                         
-                        if let object:PFObject = object as! PFObject{
+                        if let object:PFObject = object {
                             
                             
                             print(object["username"])
@@ -156,18 +156,18 @@ class AdressListViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
-    // MARK: - Table view data source
+   
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+       
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return name.count
     }
 
@@ -197,18 +197,16 @@ class AdressListViewController: UITableViewController {
             
         } else if segue.identifier == "addAdress" {
             
-            let destination = segue.destinationViewController as? AddAdressViewController
+            _ = segue.destinationViewController as? AddAdressViewController
             
             
         } else {
         
          let destination = segue.destinationViewController as? NavigateViewController
             
-            print(pin.count)
-            //print(pin[(tableView.indexPathForSelectedRow?.row)!])
+         
             
-           // self.tableView.reloadData()
-            
+
         
             destination?.name = name[(tableView.indexPathForSelectedRow?.row)!]
             destination?.note = note[(tableView.indexPathForSelectedRow?.row)!]
@@ -218,9 +216,6 @@ class AdressListViewController: UITableViewController {
             destination?.pin = pin[(tableView.indexPathForSelectedRow?.row)!]
             destination?.requestLocation = locations[(tableView.indexPathForSelectedRow?.row)!]
             
-            print(name[(tableView.indexPathForSelectedRow?.row)!])
-            print(adress1[(tableView.indexPathForSelectedRow?.row)!])
-            print(city[(tableView.indexPathForSelectedRow?.row)!])
             
         
         }

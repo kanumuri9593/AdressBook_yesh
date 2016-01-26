@@ -41,6 +41,7 @@ class AdressListViewController: UITableViewController {
         self.adress2.removeAll()
         self.city.removeAll()
         self.pin.removeAll()
+        self.tiles.removeAll()
         
         let query = PFQuery(className:"AdressList")
         query.whereKey("username", equalTo:PFUser.currentUser()!.username!)
@@ -132,6 +133,20 @@ class AdressListViewController: UITableViewController {
                                 
                           
                             }
+                            
+                            let name = object["title"]
+                            let note = object["note"]
+                            
+                            print(object["title"])
+                            
+                            print(self.tiles)
+                            
+                            let post = adress(title: name as! String, note: note as! String)
+                            print(post)
+                            self.tiles.append(post)
+                            
+                            print(self.tiles)
+                            
                         }
                     }
                     
@@ -175,9 +190,13 @@ class AdressListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! AdressListTableViewCell
         
-        let tile = adress(title: self.name[indexPath.row], note: self.note[indexPath.row])
+       // let tile = adress(title: self.name[indexPath.row], note: self.note[indexPath.row])
+        
+        var post : adress!
+        
+        post = self.tiles[indexPath.row]
 
-        cell.configCell(tile)
+        cell.configCell(post)
 
         return cell
     }

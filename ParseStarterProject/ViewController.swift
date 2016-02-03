@@ -1,11 +1,11 @@
 /**
-* Copyright (c) 2015-present, Parse, LLC.
-* All rights reserved.
-*
-* This source code is licensed under the BSD-style license found in the
-* LICENSE file in the root directory of this source tree. An additional grant
-* of patent rights can be found in the PATENTS file in the same directory.
-*/
+ * Copyright (c) 2015-present, Parse, LLC.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
 
 import UIKit
 import Parse
@@ -22,14 +22,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     var signUpState = true
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.username.delegate = self
         self.password.delegate = self
-
-       
+        
+        
         
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let user = PFUser()
                 user.username = username.text
                 user.password = password.text
-           
+                
                 user.signUpInBackgroundWithBlock {
                     (succeeded, error) -> Void in
                     if let error = error {
@@ -75,10 +75,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     } else {
                         
                         
-                            
-                            self.performSegueWithIdentifier("homepage", sender: self)
-                            
-                            
+                        
+                        self.performSegueWithIdentifier("homepage", sender: self)
+                        
+                        
                     }
                 }
                 
@@ -91,10 +91,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         print(user)
                         
                         
-                            
-                            self.performSegueWithIdentifier("homepage", sender: self)
-                            
-                         
+                        
+                        self.performSegueWithIdentifier("homepage", sender: self)
+                        
+                        
                         
                     } else {
                         
@@ -120,7 +120,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-
+    
     
     
     @IBAction func AlreadySignedUpButton(sender: AnyObject) {
@@ -140,7 +140,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             alreadySignedupLbl.setTitle("Already Signed Up? Log In", forState: UIControlState.Normal)
             signUpState = true
             
-                        
+            
             
         }
         
@@ -154,18 +154,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func alert (title :String! , message :String!) {
         
-        if #available(iOS 8.0, *) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-            
-             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-              self.presentViewController(alert, animated: true, completion: nil)
-        } else {
-            
-            
-            print("Alert view not available")
-            // Fallback on earlier versions
-        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
     
@@ -190,15 +184,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             print(PFUser.currentUser())
             
-        self.performSegueWithIdentifier("homepage", sender: self)
-                
+            self.performSegueWithIdentifier("homepage", sender: self)
+            
             
             
         }
         
     }
     
-
+    
     
     func keyboardWillShow(sender: NSNotification) {
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
@@ -217,7 +211,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.view.frame.origin.y += keyboardSize.height - offset.height
             })
         }
-        print(self.view.frame.origin.y)
+        
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -226,7 +220,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
+    
     
 }
 

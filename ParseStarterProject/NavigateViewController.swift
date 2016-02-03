@@ -37,16 +37,16 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
     var city: String = ""
     var pin: String = ""
     
-   
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(adress1 + adress2 + city + pin )
         
-
         
-       namelbl.text = name
+        
+        
+        namelbl.text = name
         
         noteLbl.text = note
         
@@ -57,7 +57,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
         cityLbl.text = city + " " + pin
         
         
-        print(name + note + adress1 + adress2 + city + pin)
+        
         
         
         let region = MKCoordinateRegion(center: requestLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
@@ -75,14 +75,14 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
         objectAnnotation.title = "Destination"
         
         self.map.addAnnotation(objectAnnotation)    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    
+    
     
     
     
@@ -90,16 +90,16 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func statrtNavigation(sender: AnyObject) {
         
-        print(PFUser.currentUser()!.username!)
+        
         
         
         let query = PFQuery(className:"AdressList")
         
-         print(PFUser.currentUser()!.username!)
+        
         
         query.whereKey("username", equalTo:PFUser.currentUser()!.username!)
         
-         print(PFUser.currentUser()!.username!)
+        
         query.findObjectsInBackgroundWithBlock {
             (objects, error) -> Void in
             if error == nil {
@@ -112,56 +112,54 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
                     
                     
                     for object in objects {
-
                         
-                 
+                        
+                        
+                        
+                        let requestCLLocation = CLLocation(latitude: self.requestLocation.latitude, longitude: self.requestLocation.longitude)
+                        
+                        CLGeocoder().reverseGeocodeLocation(requestCLLocation, completionHandler: {(placemarks, error)-> Void in
+                            
+                            if (error != nil) {
+                                print("Reverse geocoder failed with error" + error!.localizedDescription)
                                 
-                                let requestCLLocation = CLLocation(latitude: self.requestLocation.latitude, longitude: self.requestLocation.longitude)
+                            } else {
                                 
-                                CLGeocoder().reverseGeocodeLocation(requestCLLocation, completionHandler: {(placemarks, error)-> Void in
+                                if placemarks!.count > 0 {
+                                    let pm = placemarks![0]
                                     
-                                    if (error != nil) {
-                                        print("Reverse geocoder failed with error" + error!.localizedDescription)
-                                        
-                                    } else {
-                                        
-                                        if placemarks!.count > 0 {
-                                            let pm = placemarks![0] 
-                                            
-                                            let mkPm = MKPlacemark(placemark: pm)
-                                            
-                                            
-                                            let mapItem = MKMapItem(placemark:mkPm)
-                                            
-                                            mapItem.name = self.name
-                                            
-                                            //You could also choose: MKLaunchOptionsDirectionsModeWalking
-                                            let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
-                                            
-                                            mapItem.openInMapsWithLaunchOptions(launchOptions)
-                                            
-                                        } else {
-                                            print("Problem with the data received from geocoder")
-                                        }
-                                    }
-                                })
-                                
-                                
-                                
+                                    let mkPm = MKPlacemark(placemark: pm)
+                                    
+                                    
+                                    let mapItem = MKMapItem(placemark:mkPm)
+                                    
+                                    mapItem.name = self.name
+                                    
+                                    //You could also choose: MKLaunchOptionsDirectionsModeWalking
+                                    let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                                    
+                                    mapItem.openInMapsWithLaunchOptions(launchOptions)
+                                    
+                                } else {
+                                    print("Problem with the data received from geocoder")
+                                }
                             }
-                            
-                            
-                            
-                        }
+                        })
                         
-                
                         
-                        // print(object.objectId!)
+                        
                     }
+                    
+                    
+                    
                 }
                 
                 
             }
+        }
+        
+        
+    }
     
     
     @IBAction func deleteAdress(sender: AnyObject) {
@@ -187,7 +185,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         
-
+        
         
         navigationController?.popViewControllerAnimated(true)
         
@@ -195,7 +193,7 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func editAdress(sender: AnyObject) {
- 
+        
         
     }
     
@@ -217,10 +215,9 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
             
             destination?.currentLocation = "Edit the location details"
             
-            print(self.requestLocation.longitude)
-            print(self.requestLocation.latitude)
             
-           // destination?.adress1 = adress1[(tableView.indexPathForSelectedRow?.row)!]
+            
+            // destination?.adress1 = adress1[(tableView.indexPathForSelectedRow?.row)!]
             
             let query = PFQuery(className:"AdressList")
             query.whereKey("title", equalTo: self.name)
@@ -241,29 +238,29 @@ class NavigateViewController: UIViewController, CLLocationManagerDelegate {
                     print(error)
                 }
             }
-
             
-        
+            
+            
         }
-    
-    }
-    
-
-
+        
     }
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

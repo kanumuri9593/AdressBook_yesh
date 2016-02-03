@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-fZ-sJm" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="90" width="560" height="81"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-J5-boP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-J5-boP">
                                         <rect key="frame" x="144" y="8" width="272" height="65"/>
                                         <animations/>
                                         <constraints>
@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="-106" y="22"/>
         </scene>
-        <!--Adress List-->
+        <!--Address List-->
         <scene sceneID="QTx-My-xou">
             <objects>
                 <tableViewController id="sYe-W3-1Ur" customClass="AdressListViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,7 +172,7 @@
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="GmL-3E-YCU" customClass="AdressListTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="82"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GmL-3E-YCU" id="gw4-JJ-ASp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
@@ -191,7 +191,7 @@
                                                     <color key="textColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="home adress" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Q-kd-tXf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="home address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Q-kd-tXf">
                                                     <rect key="frame" x="8" y="29" width="568" height="28.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
@@ -235,7 +235,7 @@
                             <outlet property="delegate" destination="sYe-W3-1Ur" id="cke-Hl-oD1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Adress List" id="pSm-aS-i3e">
+                    <navigationItem key="navigationItem" title="Address List" id="pSm-aS-i3e">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="qnJ-gq-P1d">
                             <color key="tintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -249,19 +249,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="ajV-O9-7i8" id="AT0-5V-ACM"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIP-5C-7rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="ajV-O9-7i8">
-                    <connections>
-                        <outlet property="delegate" destination="sYe-W3-1Ur" id="feL-hx-TBU"/>
-                        <outlet property="searchContentsController" destination="sYe-W3-1Ur" id="fa7-Pz-p7o"/>
-                        <outlet property="searchResultsDataSource" destination="sYe-W3-1Ur" id="o5V-wf-L2B"/>
-                        <outlet property="searchResultsDelegate" destination="sYe-W3-1Ur" id="pcn-4W-AIA"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1286" y="22"/>
         </scene>
@@ -486,11 +475,11 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-N1-e7z" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="314" width="560" height="278"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-a6-b2W">
-                                        <rect key="frame" x="155" y="8" width="250" height="256"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-a6-b2W">
+                                        <rect key="frame" x="155" y="8" width="250" height="212"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name/Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-nQ-6QA" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="33"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name/Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-nQ-6QA" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -500,8 +489,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-AI-CPd" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="38" width="250" height="32"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-AI-CPd" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="31" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -511,8 +500,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-9L-p1P" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="75" width="250" height="33"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-9L-p1P" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="62" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -522,8 +511,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adress " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-fl-Jmt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="250" height="32"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-fl-Jmt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="93" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -533,8 +522,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nu8-cS-vnN" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="149" width="250" height="33"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nu8-cS-vnN" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="124" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -544,8 +533,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRh-ou-0gt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="187" width="250" height="32"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRh-ou-0gt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="155" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -555,8 +544,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxp-eL-bFN" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="224" width="250" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxp-eL-bFN" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="186" width="250" height="26"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -638,6 +627,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="LHm-9g-VNB"/>
-        <segue reference="hmP-J2-HVr"/>
+        <segue reference="GOY-tp-XS6"/>
     </inferredMetricsTieBreakers>
 </document>

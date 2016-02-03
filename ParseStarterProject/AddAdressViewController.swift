@@ -89,17 +89,14 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         
         let location:CLLocationCoordinate2D = manager.location!.coordinate
         
-        print(editMode)
+       
         
         if editMode == 1 {
         self.latitude = location.latitude
         self.longitude = location.longitude
         }
         
-        print(self.longitude)
-        print(self.latitude)
-        
-        print("locations = \(location.latitude) \(location.longitude)")
+      
         
         let center = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
@@ -155,14 +152,11 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
             let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea! : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country! : ""
             
-            print(locality)
-            print(postalCode)
-            print(administrativeArea)
-            print(country)
+            
             
             let currenGpsAdress : String = "Current Location : \(locality), \(administrativeArea), \(postalCode),\(country)."
             
-            print(currenGpsAdress)
+          
             
             if editMode == 1 {
             
@@ -276,7 +270,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
                 self.view.frame.origin.y += keyboardSize.height - offset.height
             })
         }
-        print(self.view.frame.origin.y)
+        
     }
     
     func keyboardWillHide(notification: NSNotification) {

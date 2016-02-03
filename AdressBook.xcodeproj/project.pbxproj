@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125423891C554EF400AD1A07 /* keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125423881C554EF400AD1A07 /* keyboard.swift */; };
 		12B1232E1C5140EC00A579DE /* materialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1232D1C5140EC00A579DE /* materialView.swift */; };
 		12B123301C51414B00A579DE /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1232F1C51414B00A579DE /* constants.swift */; };
 		12B123321C5142DE00A579DE /* materialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B123311C5142DE00A579DE /* materialTextField.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		125423881C554EF400AD1A07 /* keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keyboard.swift; sourceTree = "<group>"; };
 		12B1232D1C5140EC00A579DE /* materialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialView.swift; sourceTree = "<group>"; };
 		12B1232F1C51414B00A579DE /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		12B123311C5142DE00A579DE /* materialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialTextField.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				12B1233F1C51A3E900A579DE /* adrees.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				12B1232C1C5140AB00A579DE /* controller */,
-				125423881C554EF400AD1A07 /* keyboard.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 				12B1233C1C51588C00A579DE /* NavigateViewController.swift in Sources */,
 				12B1232E1C5140EC00A579DE /* materialView.swift in Sources */,
 				12B123421C51A55D00A579DE /* AdressListTableViewCell.swift in Sources */,
-				125423891C554EF400AD1A07 /* keyboard.swift in Sources */,
 				12B1233E1C51747100A579DE /* materialLabel.swift in Sources */,
 				12B123341C51430900A579DE /* materialButton.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,

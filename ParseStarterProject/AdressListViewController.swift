@@ -21,6 +21,7 @@ class AdressListViewController: UITableViewController {
     var city = [String]()
     var pin = [String]()
     var tiles = [adress]()
+    var arange = [adress]()
     
     
     
@@ -32,7 +33,7 @@ class AdressListViewController: UITableViewController {
         
         
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         
         self.name.removeAll()
@@ -43,6 +44,7 @@ class AdressListViewController: UITableViewController {
         self.pin.removeAll()
         self.tiles.removeAll()
         
+        
         let query = PFQuery(className:"AdressList")
         query.whereKey("username", equalTo:PFUser.currentUser()!.username!)
         query.findObjectsInBackgroundWithBlock {
@@ -50,7 +52,7 @@ class AdressListViewController: UITableViewController {
             
             if error == nil {
                 
-       
+                
                 if let objects = objects {
                     
                     
@@ -60,7 +62,7 @@ class AdressListViewController: UITableViewController {
                         if let object:PFObject = object {
                             
                             
-                            print(object["username"])
+                            
                             
                             
                             if object["title"] != nil {
@@ -69,7 +71,7 @@ class AdressListViewController: UITableViewController {
                                     
                                     self.name.append(username)
                                     
-                                    print(self.name)
+                                    
                                     
                                 }
                                 
@@ -78,7 +80,7 @@ class AdressListViewController: UITableViewController {
                                     
                                     self.note.append(note)
                                     
-                                    print(self.note)
+                                    
                                     
                                 }
                                 
@@ -86,14 +88,14 @@ class AdressListViewController: UITableViewController {
                                     
                                     self.adress1.append(ad1)
                                     
-                                    print(self.adress1)
+                                    
                                     
                                 }
                                 if let ad2 = object["Adressline2"] as? String {
                                     
                                     self.adress2.append(ad2)
                                     
-                                    //print(self.note)
+                                    
                                     
                                 }
                                 
@@ -101,7 +103,7 @@ class AdressListViewController: UITableViewController {
                                     
                                     self.city.append(city)
                                     
-                                    print(self.note)
+                                    
                                     
                                 }
                                 
@@ -109,14 +111,14 @@ class AdressListViewController: UITableViewController {
                                     
                                     self.pin.append(pin)
                                     
-                                    print(self.pin)
+                                    
                                     
                                 }else {
-                                
-                                let pinn = ""
+                                    
+                                    let pinn = ""
                                     
                                     self.pin.append(pinn)
-                                
+                                    
                                 }
                                 
                                 
@@ -126,26 +128,31 @@ class AdressListViewController: UITableViewController {
                                     
                                     self.locations.append(requestLocation)
                                     
-                                    print(self.locations)
+                                    
                                     
                                 }
                                 
                                 
-                          
+                                
                             }
                             
                             let name = object["title"]
                             let note = object["note"]
                             
-                            print(object["title"])
                             
-                            print(self.tiles)
+                            
+                            
                             
                             let post = adress(title: name as! String, note: note as! String)
                             print(post)
                             self.tiles.append(post)
+                            self.tiles.sortInPlace({ (adress1, adress2) -> Bool in
+                                
+                                adress1.title < adress2.title
+                                
+                                
+                            })
                             
-                            print(self.tiles)
                             
                         }
                     }
@@ -154,7 +161,7 @@ class AdressListViewController: UITableViewController {
                     
                     
                     self.tableView.reloadData()
-    
+                    
                 }
                 
                 
@@ -163,46 +170,46 @@ class AdressListViewController: UITableViewController {
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
-
-            }
+        
+    }
     
-   
-   
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-
-   
-
+    
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-       
+        
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return name.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! AdressListTableViewCell
         
-       // let tile = adress(title: self.name[indexPath.row], note: self.note[indexPath.row])
+        
         
         var post : adress!
         
         post = self.tiles[indexPath.row]
-
+        
         cell.configCell(post)
-
+        
         return cell
     }
     
-
-
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -220,13 +227,13 @@ class AdressListViewController: UITableViewController {
             
             
         } else {
-        
-         let destination = segue.destinationViewController as? NavigateViewController
             
-         
+            let destination = segue.destinationViewController as? NavigateViewController
             
-
-        
+            
+            
+            
+            
             destination?.name = name[(tableView.indexPathForSelectedRow?.row)!]
             destination?.note = note[(tableView.indexPathForSelectedRow?.row)!]
             destination?.adress1 = adress1[(tableView.indexPathForSelectedRow?.row)!]
@@ -236,9 +243,9 @@ class AdressListViewController: UITableViewController {
             destination?.requestLocation = locations[(tableView.indexPathForSelectedRow?.row)!]
             
             
-        
+            
         }
-
+        
     }
     
     

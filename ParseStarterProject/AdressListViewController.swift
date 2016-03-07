@@ -248,6 +248,6 @@ class AdressListViewController: UITableViewController {
         
     }
     
-    
+  //fully functional with sorted list
     
 }

@@ -62,11 +62,11 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
         locationManager.startUpdatingLocation()
         
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddAdressViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddAdressViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddAdressViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
         if editMode == 2 {
         
@@ -247,7 +247,7 @@ class AddAdressViewController: UIViewController, CLLocationManagerDelegate ,MKMa
     }
     
    
-    func dismissKeyboard() {
+    override func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }

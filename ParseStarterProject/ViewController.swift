@@ -32,13 +32,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-        
-        
+        self.hideKeyboardWhenTappedAround()
+//        
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+//        
+//        
         
     }
     
@@ -171,10 +173,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
+//    func dismissKeyboard() {
+//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        view.endEditing(true)
+//    }
     
     
     
@@ -194,34 +196,46 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    func keyboardWillShow(sender: NSNotification) {
-        let userInfo: [NSObject : AnyObject] = sender.userInfo!
-        
-        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
-        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-        
-        if keyboardSize.height == offset.height {
-            if self.view.frame.origin.y == 0 {
-                UIView.animateWithDuration(0.1, animations: { () -> Void in
-                    self.view.frame.origin.y -= keyboardSize.height
-                })
-            }
-        } else {
-            UIView.animateWithDuration(0.1, animations: { () -> Void in
-                self.view.frame.origin.y += keyboardSize.height - offset.height
-            })
-        }
-        
+//    func keyboardWillShow(sender: NSNotification) {
+//        let userInfo: [NSObject : AnyObject] = sender.userInfo!
+//        
+//        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+//        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+//        
+//        if keyboardSize.height == offset.height {
+//            if self.view.frame.origin.y == 0 {
+//                UIView.animateWithDuration(0.1, animations: { () -> Void in
+//                    self.view.frame.origin.y -= keyboardSize.height
+//                })
+//            }
+//        } else {
+//            UIView.animateWithDuration(0.1, animations: { () -> Void in
+//                self.view.frame.origin.y += keyboardSize.height - offset.height
+//            })
+//        }
+//        
+//    }
+//    
+//    func keyboardWillHide(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//            self.view.frame.origin.y += keyboardSize.height
+//        }
+//    }
+    
+    
+  
+    
+    
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y += keyboardSize.height
-        }
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
-    
-    
-    
 }
 
 

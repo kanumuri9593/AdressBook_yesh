@@ -9,7 +9,10 @@
 import UIKit
 import Parse
 
-class AdressListViewController: UITableViewController {
+
+
+class AdressListViewController: UITableViewController, UISearchDisplayDelegate, UISearchBarDelegate {
+
     
     
     var locations = [CLLocationCoordinate2D]()
@@ -22,17 +25,23 @@ class AdressListViewController: UITableViewController {
     var pin = [String]()
     var tiles = [adress]()
     var arange = [adress]()
+    var filter = [adress]()
     
+    let searchController = UISearchController(searchResultsController: nil)
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+       override func viewDidLoad() {
         
+        
+        super.viewDidLoad()
+ 
         
         self.tableView.reloadData()
         
         
+        
     }
+    
+    
     
     override func viewDidAppear(animated: Bool) {
         
@@ -47,6 +56,7 @@ class AdressListViewController: UITableViewController {
         
         let query = PFQuery(className:"AdressList")
         query.whereKey("username", equalTo:PFUser.currentUser()!.username!)
+        
         query.findObjectsInBackgroundWithBlock {
             (objects, error) -> Void in
             
@@ -83,6 +93,7 @@ class AdressListViewController: UITableViewController {
                                     
                                     
                                 }
+                               
                                 
                                 if let ad1 = object["Adressline1"] as? String {
                                     
@@ -146,12 +157,12 @@ class AdressListViewController: UITableViewController {
                             let post = adress(title: name as! String, note: note as! String)
                             print(post)
                             self.tiles.append(post)
-                            self.tiles.sortInPlace({ (adress1, adress2) -> Bool in
-                                
-                                adress1.title < adress2.title
-                                
-                                
-                            })
+//                            self.tiles.sortInPlace({ (adress1, adress2) -> Bool in
+//                                
+//                                adress1.title < adress2.title
+//                                
+//                                
+//                            })
                             
                             
                         }
@@ -183,6 +194,7 @@ class AdressListViewController: UITableViewController {
     
     
     
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
@@ -190,20 +202,26 @@ class AdressListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return name.count
+        
+        return self.tiles.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! AdressListTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! AdressListTableViewCell
         
         
         
         var post : adress!
         
-        post = self.tiles[indexPath.row]
+            post = self.tiles[indexPath.row]
+            
+            cell.configCell(post)
+
+            
         
-        cell.configCell(post)
+
+        
         
         return cell
     }
@@ -249,5 +267,17 @@ class AdressListViewController: UITableViewController {
     }
     
   //fully functional with sorted list
+   
+
+
+  
+    
+    
+    
+    
+    
+    
     
 }
+
+

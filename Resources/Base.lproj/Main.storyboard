@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-N7-o87">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2wa-QN-V8Q"/>
@@ -30,7 +29,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-J5-boP">
                                         <rect key="frame" x="144" y="8" width="272" height="65"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="fCP-07-COX"/>
                                             <constraint firstAttribute="width" constant="272" id="r1t-X9-UOs"/>
@@ -40,7 +38,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="sYr-J5-boP" firstAttribute="centerX" secondItem="fHX-fZ-sJm" secondAttribute="centerX" id="3tV-vy-84z"/>
@@ -53,7 +50,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-oA-e57">
                                         <rect key="frame" x="8" y="8" width="143" height="21"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Vpl-58-oSC"/>
                                             <constraint firstAttribute="width" constant="143" id="o5c-zj-0cd"/>
@@ -64,7 +60,6 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84X-Cg-R5p" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="142.5" y="109" width="275" height="30"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="MvX-xU-aJ4"/>
@@ -76,7 +71,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-Tt-HZv" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="142.5" y="154" width="275" height="30"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="275" id="HwZ-b7-Yi5"/>
@@ -88,7 +82,6 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-J6-a2W" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="195" y="236" width="171" height="30"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="171" id="E9R-GH-h5j"/>
@@ -104,7 +97,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-ZL-ynd" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="121" y="296" width="319.5" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Hf7-YT-LNO"/>
                                             <constraint firstAttribute="width" constant="319.5" id="Pa0-j0-XG8"/>
@@ -118,7 +110,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="2NK-J6-a2W" firstAttribute="centerX" secondItem="EaZ-iC-9WE" secondAttribute="centerX" id="1tC-b1-Vhk"/>
@@ -134,7 +125,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EaZ-iC-9WE" secondAttribute="bottom" constant="20" id="3Bh-ya-zOL"/>
@@ -168,11 +158,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" id="SeD-ib-dk7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="GmL-3E-YCU" customClass="AdressListTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="82"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GmL-3E-YCU" id="gw4-JJ-ASp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
@@ -183,7 +172,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeswanth varma kanumuri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS1-9J-DOH">
                                                     <rect key="frame" x="8" y="8" width="568" height="21"/>
-                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="RHl-CZ-ePQ"/>
                                                     </constraints>
@@ -193,13 +181,11 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="home address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1Q-kd-tXf">
                                                     <rect key="frame" x="8" y="29" width="568" height="28.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="VS1-9J-DOH" secondAttribute="trailing" constant="8" id="7zu-U4-dbP"/>
@@ -212,7 +198,6 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="eLh-vE-DWC" firstAttribute="top" secondItem="gw4-JJ-ASp" secondAttribute="top" constant="4" id="8bE-CQ-aMP"/>
@@ -221,7 +206,6 @@
                                         <constraint firstItem="eLh-vE-DWC" firstAttribute="leading" secondItem="gw4-JJ-ASp" secondAttribute="leading" constant="8" id="qQQ-e4-Du4"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="noteLbl" destination="C1Q-kd-tXf" id="rqD-dX-9yc"/>
@@ -271,10 +255,8 @@
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="94W-De-lcs">
                                         <rect key="frame" x="8" y="8" width="544" height="210"/>
-                                        <animations/>
                                     </mapView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="226" id="F0S-wT-pdF"/>
@@ -292,7 +274,6 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZb-Z0-Noq" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="39"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="oVP-lY-tNg"/>
                                                 </constraints>
@@ -302,7 +283,6 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12t-rA-oyX" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="44" width="250" height="39"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="XV7-Sa-WKb"/>
                                                 </constraints>
@@ -312,7 +292,6 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAC-Tu-EdQ" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="87" width="250" height="39"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="y7Z-Kc-OyR"/>
                                                 </constraints>
@@ -322,7 +301,6 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4N-eh-TsR" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="131" width="250" height="39"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="Ftm-7c-N8m"/>
                                                 </constraints>
@@ -332,7 +310,6 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAZ-lz-fMY" customClass="materialLabel" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="174" width="250" height="39"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="ujM-Vj-JE4"/>
                                                 </constraints>
@@ -342,7 +319,6 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31h-9G-X3B" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="218" width="150" height="39"/>
-                                                <animations/>
                                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="RRa-Uz-acb"/>
@@ -355,10 +331,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                     </stackView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="NHw-27-OAV" firstAttribute="top" secondItem="Drn-PB-hdN" secondAttribute="top" constant="8" id="Pqi-Oq-3yR"/>
@@ -368,12 +342,11 @@
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezC-R0-5bu">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6V2-EU-CQD"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Edit" id="kfJ-Fy-0L4">
+                                    <barButtonItem systemItem="compose" id="kfJ-Fy-0L4">
                                         <color key="tintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="editAdress:" destination="g2Y-an-tyG" id="WEc-S5-RCR"/>
@@ -381,7 +354,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TcR-Nk-vZi"/>
-                                    <barButtonItem title="Delete" id="XZK-FP-NsL">
+                                    <barButtonItem systemItem="trash" id="XZK-FP-NsL">
                                         <color key="tintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="deleteAdress:" destination="g2Y-an-tyG" id="wrh-m1-vHa"/>
@@ -390,7 +363,6 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="n4e-sw-woG" firstAttribute="trailing" secondItem="8gQ-MT-I7m" secondAttribute="trailingMargin" id="0MR-Jp-rdj"/>
@@ -436,10 +408,8 @@
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0T5-gA-MXx">
                                         <rect key="frame" x="8" y="8" width="544" height="186"/>
-                                        <animations/>
                                     </mapView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="0T5-gA-MXx" firstAttribute="trailing" secondItem="j7a-vp-Jai" secondAttribute="trailingMargin" id="0yh-fB-fwp"/>
@@ -454,7 +424,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kK3-S5-kg6">
                                         <rect key="frame" x="8" y="8" width="539" height="60"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="izL-SX-YdD"/>
                                         </constraints>
@@ -463,7 +432,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="Auz-x1-jlz"/>
@@ -475,12 +443,11 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-N1-e7z" customClass="materialView" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="314" width="560" height="278"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-a6-b2W">
-                                        <rect key="frame" x="155" y="8" width="250" height="212"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-a6-b2W">
+                                        <rect key="frame" x="155" y="8" width="250" height="256"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name/Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-nQ-6QA" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="26"/>
-                                                <animations/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name/Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-nQ-6QA" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="33"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="PLy-gy-YsT"/>
@@ -489,9 +456,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-AI-CPd" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="31" width="250" height="26"/>
-                                                <animations/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-AI-CPd" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="38" width="250" height="32"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="S1x-WV-jvz"/>
@@ -500,9 +466,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-9L-p1P" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="62" width="250" height="26"/>
-                                                <animations/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-9L-p1P" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="75" width="250" height="33"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="1ZO-Ez-hnG"/>
@@ -511,9 +476,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-fl-Jmt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="93" width="250" height="26"/>
-                                                <animations/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-fl-Jmt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="112" width="250" height="32"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="eV6-QO-ymK"/>
@@ -522,9 +486,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nu8-cS-vnN" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="124" width="250" height="26"/>
-                                                <animations/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nu8-cS-vnN" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="149" width="250" height="33"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="87Q-qi-5ys"/>
@@ -533,9 +496,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRh-ou-0gt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="155" width="250" height="26"/>
-                                                <animations/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRh-ou-0gt" customClass="materialTextfield" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="187" width="250" height="32"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="FrV-o7-7yo"/>
@@ -544,9 +506,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxp-eL-bFN" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="186" width="250" height="26"/>
-                                                <animations/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxp-eL-bFN" customClass="materialButton" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="224" width="250" height="33"/>
                                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="SrQ-q4-Ciy"/>
@@ -561,10 +522,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                     </stackView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="iSW-a6-b2W" secondAttribute="bottom" constant="8" id="FQ3-TY-Ioh"/>
@@ -573,7 +532,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="j7a-vp-Jai" firstAttribute="leading" secondItem="K4I-z6-v5X" secondAttribute="leadingMargin" id="04S-LO-SpX"/>
@@ -614,7 +572,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IXA-i8-12Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="sYe-W3-1Ur" kind="relationship" relationship="rootViewController" id="lHN-EC-OAb"/>

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/AdressListViewController.swift"
-            timestampString = "476211808.642834"
+            timestampString = "479076181.787639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282">
+            startingLineNumber = "311"
+            endingLineNumber = "311">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/AdressListViewController.swift"
-            timestampString = "476211808.642834"
+            timestampString = "479076181.787639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327">
+            startingLineNumber = "356"
+            endingLineNumber = "356">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
